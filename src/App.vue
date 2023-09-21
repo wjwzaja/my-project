@@ -1,16 +1,25 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div id="app">
+      <img alt="Vue logo" src="./assets/ying.jpg">
+    </div>
+    <div class="style1">基本信息</div>
+    <div :style="{fontSize:'20px'}">姓名:{{myname}}</div>
+    <div :style="{fontSize:'20px'}">学号:{{number}}</div>
+    <div class="style1">兴趣爱好</div>
+     <div :style="{fontSize:'20px'}">羽毛球</div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
-  }
+    data(){
+        return{
+            myname:"温嘉伟",
+            number: 2310273028
+        }
+    }
 }
 </script>
 
@@ -22,5 +31,10 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+  .style1{
+    font-size:40px;
+    font-weight:bold;
+
+  }
 }
 </style>
